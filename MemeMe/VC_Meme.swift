@@ -1,8 +1,8 @@
 //
 //  VC_Meme.swift
-//  Area51
+//  MemeMe
 //
-//  Created by Jeff on 8/14/17.
+//  Created by Jeff on 8/28/17.
 //  Copyright © 2017 JeffDeagostino. All rights reserved.
 //
 
@@ -19,13 +19,11 @@ UINavigationControllerDelegate {
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
-    
-    
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSStrokeWidthAttributeName : -2.0,
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 35)!
     ]
     
     override func viewDidLoad() {
@@ -80,12 +78,13 @@ UINavigationControllerDelegate {
         dismiss(animated: true, completion: nil)
         
     }
-    @IBAction func pick(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        self.present(imagePicker, animated:true, completion:nil)
-    }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        topTextField.text = "Type here . . . "
+        bottomTextField.text = "Type here . . . "
+        SelectedImageView.image = nil
+        activityView.isEnabled = false
+    }
     @IBAction func pickFromAlbum(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -136,21 +135,7 @@ UINavigationControllerDelegate {
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
-    
-    //    func textFieldDidBeginEditing(_ textField: UITextField) {
-    //        if textField.text == "Enter Text" {
-    //            textField.text = ""
-    //        }
-    //    }
-    //
-    //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    //        textField.resignFirstResponder()
-    //        //dismiss(animated: true, completion: nil)
-    //        //view.frame.origin.y = 0
-    //
-    //        return true;
-    //
-    //    }
+
     @IBAction func activityView(_ sender: Any) {
         let image = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)

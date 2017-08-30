@@ -39,6 +39,11 @@
                                                 <action selector="activityView:" destination="LfM-rL-djm" id="T9E-51-ToD"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="dZn-du-xhS">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="LfM-rL-djm" id="1IS-dD-dRN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
