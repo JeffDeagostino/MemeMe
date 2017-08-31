@@ -22,15 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UoG-6I-LEI">
-                                <rect key="frame" x="16" y="44" width="343" height="579"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UoG-6I-LEI">
+                                <rect key="frame" x="16" y="55" width="343" height="568"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWx-mG-Odk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="eCt-zy-95x"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="z8E-cf-6qh"/>
+                                    <constraint firstAttribute="height" constant="55" id="8Zc-IJ-IQJ"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="Meme Maker" id="8in-Kb-lxj">
@@ -69,8 +68,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pOl-UU-hPE"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type here . . ." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gp-VE-2KW" userLabel="Top Text Field">
-                                <rect key="frame" x="16" y="64" width="343" height="40"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type here . . ." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gp-VE-2KW" userLabel="Top Text Field">
+                                <rect key="frame" x="16" y="75" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0TJ-vd-zam"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="LO5-7v-yNU"/>
@@ -79,7 +78,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type here . . . " textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-Om-lru" userLabel="Bottom Text Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type here . . ." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-Om-lru" userLabel="Bottom Text Field">
                                 <rect key="frame" x="16" y="553" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="U2V-UC-m6W"/>
@@ -117,6 +116,8 @@
                         <outlet property="activityView" destination="J1w-er-PSH" id="DTB-9K-7H6"/>
                         <outlet property="bottomTextField" destination="bTz-Om-lru" id="aom-uM-K2z"/>
                         <outlet property="cameraButton" destination="Jeu-f2-Apu" id="iUO-nl-qV7"/>
+                        <outlet property="navBar" destination="zWx-mG-Odk" id="gsb-Ep-6dK"/>
+                        <outlet property="selectedImageView" destination="UoG-6I-LEI" id="8IX-1c-pMC"/>
                         <outlet property="toolBar" destination="AeL-Ba-QWg" id="Q64-Zv-dKM"/>
                         <outlet property="topTextField" destination="1gp-VE-2KW" id="Q7A-kX-qzh"/>
                     </connections>
