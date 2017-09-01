@@ -36,6 +36,8 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>enable photo library access</string>
+	<key>NSCameraUsageDescription</key>
+	<string>enable camera access</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

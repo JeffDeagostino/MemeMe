@@ -192,7 +192,7 @@ extension VC_Meme:UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             selectedImageView.image = image
-            selectedImageView.contentMode = .scaleAspectFill
+            selectedImageView.contentMode = .scaleAspectFit
         }
         
         dismiss(animated: true, completion: nil)
@@ -211,7 +211,7 @@ extension VC_Meme: UITextFieldDelegate {
         textField.resignFirstResponder()
         //dismiss(animated: true, completion: nil)
         
-        return true;
+        return true
         
     }
     
